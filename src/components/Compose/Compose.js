@@ -21,7 +21,10 @@ export default class Compose extends Component {
   }
 
   createPost() {
-
+    let {text} = this.state;
+    
+    this.props.createPostFN(text);
+    this.setState({text: ''})
   }
 
   render() {
